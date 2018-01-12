@@ -1,4 +1,4 @@
-var Stack = function()
+let Stack = function()
 {
   this.count = 0;
   this.storage = {};
@@ -6,8 +6,9 @@ var Stack = function()
 
 Stack.prototype.push = function(value)
 {
-  this.storage[this.count] = value;
+  let result = this.storage[this.count] = value;
   this.count++;
+  return result;
 };
 Stack.prototype.pop = function()
 {
@@ -23,3 +24,6 @@ Stack.prototype.size = function()
 {
   return this.count;
 };
+
+let p = new Stack();
+p.push(5);
